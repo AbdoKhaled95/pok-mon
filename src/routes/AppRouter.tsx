@@ -25,11 +25,11 @@ export const AppRouter = () => {
             <Route element={<Layout />}>
               <Route index element={<PokémonsPage />} />
               <Route
-                path={`/${ROUTES_PATH.pokémon}`}
+                path={`/${ROUTES_PATH.POKEMON}`}
                 element={<PokémonsPage />}
               />
               <Route
-                path={`/${ROUTES_PATH.pokémon}/:pokémonId`}
+                path={`/${ROUTES_PATH.POKEMON}/:id`}
                 element={<PokémonPage />}
               />
             </Route>

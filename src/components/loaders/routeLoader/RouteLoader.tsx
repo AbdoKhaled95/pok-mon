@@ -2,7 +2,7 @@ import "./RouteLoader.scss";
 const RouteLoader = () => {
   return (
     <div className="route_loader">
-      <p>route_loader...</p>
+      <p>RouteLoader...</p>
     </div>
   );
 };

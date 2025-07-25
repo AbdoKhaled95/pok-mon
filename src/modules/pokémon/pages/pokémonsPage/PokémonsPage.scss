@@ -1,6 +1,7 @@
 @use "@styles/colors" as *;
 
 .pokémons_page {
+  padding-block: 1rem;
   &.pagination {
     background-color: $background-pageControl;
   }
@@ -12,8 +13,12 @@
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      flex: 1;
       &---head {
         align-items: center;
+      }
+      &---items {
+        flex: 1;
       }
     }
   }

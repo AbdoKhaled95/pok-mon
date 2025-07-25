@@ -6,7 +6,6 @@ import CustomContainer from "@components/containers/customContainer/CustomContai
 import type { RootState } from "@store/store";
 import { useSelector } from "react-redux";
 import PokémonsHead from "@modules/pokémon/components/pokémonsHead/PokémonsHead";
-import { components } from "react-select";
 import PokémonLoadMore from "@modules/pokémon/components/pokémonLoadMore/PokémonLoadMore";
 import PokémonPagination from "@modules/pokémon/components/pokémonPagination/PokémonPagination";
 
@@ -21,17 +20,23 @@ const PokémonsPage = () => {
       case 0:
         return {
           mode: "pagination",
-          component: PokémonPagination({}),
+          component: PokémonPagination({
+            className: "pokémons_page-container--content---items",
+          }),
         };
       case 1:
         return {
           mode: "loadMore",
-          component: PokémonLoadMore({}),
+          component: PokémonLoadMore({
+            className: "pokémons_page-container--content---items",
+          }),
         };
       default:
         return {
           mode: "pagination",
-          component: PokémonPagination({}),
+          component: PokémonPagination({
+            className: "pokémons_page-container--content---items",
+          }),
         };
     }
   };

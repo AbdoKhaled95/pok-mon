@@ -10,8 +10,6 @@ export const useGetPokémons = () => {
   return useQuery({
     queryKey: [POKEMONS_QUERY_KEY, limit, offset],
     queryFn: () => getPokemons({ limit, offset }),
-    staleTime: 5000,
-    gcTime: 5000,
-    refetchOnWindowFocus: false,
+    placeholderData: (previousData) => previousData,
   });
 };

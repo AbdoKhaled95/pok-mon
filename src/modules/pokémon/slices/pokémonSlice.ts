@@ -5,11 +5,13 @@ export type PokémonSlice = {
   limit: number;
   offset: number;
   mode: number;
+  page: number;
 };
 
 const initialState: PokémonSlice = {
   pokémonId: null,
   offset: 0,
+  page: 1,
   limit: 20,
   mode: 0, // 0 = pagination, 1 = load more
 };
@@ -24,6 +26,9 @@ const pokémonSlice = createSlice({
     setOffset: (state, action) => {
       state.offset = action.payload;
     },
+    setPage: (state, action) => {
+      state.page = action.payload;
+    },
     setPokémonId: (state, action) => {
       state.pokémonId = action.payload;
     },
@@ -31,6 +36,11 @@ const pokémonSlice = createSlice({
   },
 });
 
-export const { setMode, setOffset, setPokémonId, setPokémonInitialState } =
-  pokémonSlice.actions;
+export const {
+  setMode,
+  setPage,
+  setOffset,
+  setPokémonId,
+  setPokémonInitialState,
+} = pokémonSlice.actions;
 export default pokémonSlice.reducer;

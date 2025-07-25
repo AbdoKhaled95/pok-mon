@@ -8,5 +8,5 @@ export enum ROUTES_PATH {
   NOT_FOUND = "404",
   FORBIDDEN = "403",
   UNAUTHORIZED = "401",
-  pokémon = "pokémon",
+  POKEMON = "pokémon",
 }
