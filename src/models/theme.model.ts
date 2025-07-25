@@ -13,6 +13,7 @@ declare module "@mui/material/styles" {
     overlay: string;
     pageControl: string;
     loadMore: string;
+    cover: string;
   }
   interface PaletteOptions {
     border?: {

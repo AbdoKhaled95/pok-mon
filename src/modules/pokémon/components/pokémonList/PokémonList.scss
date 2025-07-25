@@ -1,5 +1,20 @@
+@use "@styles/breakpoints" as *;
+
 .pokémon_list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+  @include respondTo(xs) {
+    grid-template-columns: repeat(1, 1fr);
+    height: 1.5rem;
+  }
+  @include respondTo(sm) {
+    grid-template-columns: repeat(2, 1fr);
+    height: 1.5rem;
+  }
+  @include respondTo(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include respondTo(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

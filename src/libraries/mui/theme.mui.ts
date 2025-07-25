@@ -25,6 +25,7 @@ export const theme = ({
         overlay: PALETTE_COLORS.BACKGROUND_OVERLAY[theme],
         pageControl: PALETTE_COLORS.BACKGROUND_PAGE_CONTROL[theme],
         loadMore: PALETTE_COLORS.BACKGROUND_LOAD_MORE[theme],
+        cover: PALETTE_COLORS.BACKGROUND_COVER[theme],
       },
       border: {
         primary: PALETTE_COLORS.BORDER_PRIMARY[theme],

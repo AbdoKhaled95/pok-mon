@@ -33,6 +33,10 @@ export const PALETTE_COLORS = {
     light: "#edfdf3",
     dark: "#edfdf3",
   },
+  BACKGROUND_COVER: {
+    light: "#fcfcfc",
+    dark: "#fcfcfc",
+  },
   BORDER_PRIMARY: {
     light: "#3eb6ae",
     dark: "#3eb6ae",
