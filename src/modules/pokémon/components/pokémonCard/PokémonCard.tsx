@@ -2,16 +2,18 @@ import { Typography } from "@mui/material";
 import "./PokémonCard.scss";
 type Props = {
   className?: string;
-  id: number;
+  url: string;
 };
-const PokémonCard = ({ className, id }: Props) => {
+const PokémonCard = ({ className, url }: Props) => {
+  const match = url.match(/\/pokemon\/(\d+)\//);
+  const number = match ? parseInt(match[1], 10) : null;
   return (
     <div className={`pokémon_card ${className ?? ""}`}>
       <div className="pokémon_card-cover">
         <img
           className="pokémon_card-cover--img"
-          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${1}.svg`}
-          alt={`pokémon ${1}`}
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${number}.png`}
+          alt={`pokémon ${number}`}
         />
       </div>
       <div className="pokémon_card-info">

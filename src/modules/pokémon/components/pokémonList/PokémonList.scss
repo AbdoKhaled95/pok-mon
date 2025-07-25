@@ -17,4 +17,7 @@
   @include respondTo(lg) {
     grid-template-columns: repeat(4, 1fr);
   }
+  @include respondTo(xl) {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }

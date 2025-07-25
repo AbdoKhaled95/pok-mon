@@ -8,7 +8,8 @@ import AppLoader from "@components/loaders/appLoader/AppLoader";
 import MuiThemeProvider from "@libraries/mui/ThemeProvider.mui";
 import { BrowserRouter } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
-
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+const queryClient = new QueryClient();
 const App = lazy(() => import("./App"));
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -17,7 +18,9 @@ createRoot(document.getElementById("root")!).render(
         <MuiThemeProvider>
           <BrowserRouter>
             <Suspense fallback={<AppLoader />}>
-              <App />
+              <QueryClientProvider client={queryClient}>
+                <App />
+              </QueryClientProvider>
             </Suspense>
           </BrowserRouter>
         </MuiThemeProvider>

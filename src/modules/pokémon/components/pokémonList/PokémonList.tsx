@@ -9,7 +9,10 @@ const PokémonList = ({ className, data }: Props) => {
   return (
     <div className={`pokémon_list ${className ?? ""}`}>
       {data.map((item, index) => (
-        <PokémonCard key={index} id={item.id} />
+        <PokémonCard
+          key={index}
+          url={"https://pokeapi.co/api/v2/pokemon/10001/"}
+        />
       ))}
     </div>
   );
