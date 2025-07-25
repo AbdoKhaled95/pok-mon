@@ -16,15 +16,15 @@ export const theme = ({
     breakpoints,
     palette: {
       mode: mode,
-      primary: {
-        main: PALETTE_COLORS.PRIMARY_MAIN[theme],
-      },
+
       text: {
         primary: PALETTE_COLORS.TEXT_PRIMARY[theme],
       },
       background: {
         default: PALETTE_COLORS.BACKGROUND_DEFAULT[theme],
         overlay: PALETTE_COLORS.BACKGROUND_OVERLAY[theme],
+        pageControl: PALETTE_COLORS.BACKGROUND_PAGE_CONTROL[theme],
+        loadMore: PALETTE_COLORS.BACKGROUND_LOAD_MORE[theme],
       },
       border: {
         primary: PALETTE_COLORS.BORDER_PRIMARY[theme],

@@ -5,6 +5,13 @@ $warning-main: var(--mui-palette-warning-main);
 $success-main: var(--mui-palette-success-main);
 $info-main: var(--mui-palette-info-main);
 
+$primary-light: var(--mui-palette-primary-light);
+$secondary-light: var(--mui-palette-secondary-light);
+$error-light: var(--mui-palette-error-light);
+$warning-light: var(--mui-palette-warning-light);
+$success-light: var(--mui-palette-success-light);
+$info-light: var(--mui-palette-info-light);
+
 $text-primary: var(--mui-palette-text-primary);
 $text-secondary: var(--mui-palette-text-secondary);
 $text-disabled: var(--mui-palette-text-disabled);
@@ -12,6 +19,8 @@ $text-disabled: var(--mui-palette-text-disabled);
 $background-default: var(--mui-palette-background-default);
 $background-paper: var(--mui-palette-background-paper);
 $background-overlay: var(--mui-palette-background-overlay);
+$background-pageControl: var(--mui-palette-background-pageControl);
+$background-loadMore: var(--mui-palette-background-loadMore);
 
 $border-primary: var(--mui-palette-border-primary);
 

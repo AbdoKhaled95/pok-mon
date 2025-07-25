@@ -8,8 +8,9 @@ import type { RootState } from "@store/store";
 
 const PokémonPage = () => {
   const { t } = useTranslation();
-  const { pokémonId } = useSelector((state: RootState) => state.Pokémon);
   useMount({ documentTitle: t("pokémon", { ns: "pokémon" }) });
+  const { pokémonId } = useSelector((state: RootState) => state.Pokémon);
+
   return (
     <PageMotion id="pokémon_page">
       <CustomContainer className="pokémon_page-container">

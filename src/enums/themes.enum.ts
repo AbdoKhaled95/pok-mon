@@ -1,5 +1,4 @@
 import type { AppTheme } from "@models/theme.model";
-import { light } from "node_modules/@mui/material/esm/styles/createPalette";
 
 export const APP_THEMES: AppTheme[] = [
   {
@@ -14,10 +13,6 @@ export const APP_THEMES: AppTheme[] = [
   },
 ];
 export const PALETTE_COLORS = {
-  PRIMARY_MAIN: {
-    light: "#3eb6ae",
-    dark: "#3eb6ae",
-  },
   TEXT_PRIMARY: {
     light: "#000",
     dark: "#fff",
@@ -29,6 +24,14 @@ export const PALETTE_COLORS = {
   BACKGROUND_OVERLAY: {
     light: "rgba(0, 0, 0, 0.5)",
     dark: "rgba(255, 255, 255, 0.08)",
+  },
+  BACKGROUND_PAGE_CONTROL: {
+    light: "#edf3ff",
+    dark: "#edf3ff",
+  },
+  BACKGROUND_LOAD_MORE: {
+    light: "#edfdf3",
+    dark: "#edfdf3",
   },
   BORDER_PRIMARY: {
     light: "#3eb6ae",

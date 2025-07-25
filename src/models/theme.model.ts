@@ -11,6 +11,8 @@ declare module "@mui/material/styles" {
   }
   interface TypeBackground {
     overlay: string;
+    pageControl: string;
+    loadMore: string;
   }
   interface PaletteOptions {
     border?: {
