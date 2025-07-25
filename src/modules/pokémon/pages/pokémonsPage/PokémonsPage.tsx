@@ -6,6 +6,9 @@ import CustomContainer from "@components/containers/customContainer/CustomContai
 import type { RootState } from "@store/store";
 import { useSelector } from "react-redux";
 import PokémonsHead from "@modules/pokémon/components/pokémonsHead/PokémonsHead";
+import { components } from "react-select";
+import PokémonLoadMore from "@modules/pokémon/components/pokémonLoadMore/PokémonLoadMore";
+import PokémonPagination from "@modules/pokémon/components/pokémonPagination/PokémonPagination";
 
 const PokémonsPage = () => {
   const { t } = useTranslation();
@@ -16,20 +19,32 @@ const PokémonsPage = () => {
   const getMode = () => {
     switch (mode) {
       case 0:
-        return "pagination";
+        return {
+          mode: "pagination",
+          component: PokémonPagination({}),
+        };
       case 1:
-        return "loadMore";
+        return {
+          mode: "loadMore",
+          component: PokémonLoadMore({}),
+        };
       default:
-        return "pagination";
+        return {
+          mode: "pagination",
+          component: PokémonPagination({}),
+        };
     }
   };
 
   return (
-    <PageMotion className={`pokémons_page ${getMode()}`} id="pokémons_page">
+    <PageMotion
+      className={`pokémons_page ${getMode().mode}`}
+      id="pokémons_page"
+    >
       <CustomContainer className="pokémons_page-container">
         <div className="pokémons_page-container--content">
           <PokémonsHead className="pokémons_page-container--content---head" />
-          {getMode()}
+          {getMode().component}
         </div>
       </CustomContainer>
     </PageMotion>
