@@ -13,7 +13,7 @@ type Props = {
 const PokémonPagination = ({ className }: Props) => {
   const { limit, page } = useSelector((state: RootState) => state.Pokémon);
   const dispatch = useDispatch();
-  const { data, isError, refetch, isLoading } = useGetPokémons();
+  const { data, isError, refetch, isLoading, isFetching } = useGetPokémons();
   const res: Pokémon = data?.data;
   const pokémonList = res?.results;
   const totalPages = Math.ceil(res?.count / limit);
@@ -24,10 +24,15 @@ const PokémonPagination = ({ className }: Props) => {
   };
 
   if (isLoading) return <CustomLoader />;
-  if (isError)
+  if (!isError)
     return (
-      <div>
-        <Button onClick={() => refetch()}>Retry</Button>
+      <div className="pokémon_pagination-error">
+        <Typography color="error" variant="h6">
+          Some thing went wrong
+        </Typography>
+        <Button onClick={() => refetch()} variant="contained">
+          Retry
+        </Button>
       </div>
     );
 
@@ -41,6 +46,7 @@ const PokémonPagination = ({ className }: Props) => {
           color="primary"
           onChange={onPageChange}
           page={page}
+          disabled={isFetching}
         />
         <Typography
           variant="body2"
