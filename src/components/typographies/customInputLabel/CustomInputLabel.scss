@@ -1,0 +1,7 @@
+@use "@styles/colors" as *;
+.custom_input_label {
+  padding-bottom: 1rem;
+  &-required {
+    color: $error-main;
+  }
+}

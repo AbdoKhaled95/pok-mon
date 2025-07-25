@@ -1,0 +1,14 @@
+@use "@styles/colors" as *;
+@use "@styles/commons" as *;
+
+.header_link {
+  text-decoration: none;
+  color: $text-primary;
+  &:hover {
+    color: $primary-main;
+    @extend .transition-03;
+  }
+  &.active {
+    color: $primary-main;
+  }
+}

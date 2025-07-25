@@ -1,0 +1,6 @@
+@use "@styles/commons" as *;
+@use "@styles/colors" as *;
+.languages {
+  display: flex;
+  gap: 0.5rem;
+}

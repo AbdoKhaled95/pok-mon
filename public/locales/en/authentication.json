@@ -1,0 +1,12 @@
+{
+  "login": "Login",
+  "register": "Register",
+  "loginForm": {
+    "email": "Email",
+    "emailPlaceholder": "Enter your email",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "passwordLengthError": "Password must be at least 8 characters long",
+    "submit": "Login"
+  }
+}

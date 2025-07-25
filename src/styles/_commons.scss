@@ -1,0 +1,38 @@
+@use "@styles/colors" as *;
+@use "@styles/spaces" as *;
+@use "@styles/grids" as *;
+@use "@styles/variables" as *;
+
+.border {
+  border: 1px solid $border-primary;
+}
+.border_radius-1r {
+  border-radius: 1rem;
+}
+.pointer {
+  cursor: pointer;
+}
+[dir="rtl"] .flipIcon {
+  transform: scale(-1, 1);
+}
+.rounded {
+  border-radius: 50%;
+}
+.fixed {
+  position: fixed;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.flow-hidden {
+  overflow: hidden;
+}
+.flow-auto {
+  overflow: auto;
+}
+.transition-03 {
+  transition: all $transition_s-primary;
+}

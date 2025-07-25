@@ -1,0 +1,10 @@
+@use "@styles/colors" as *;
+.app_loader {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $background-overlay;
+}

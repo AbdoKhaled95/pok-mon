@@ -1,0 +1,16 @@
+@use "@styles/breakpoints" as *;
+@use "@styles/colors" as *;
+@use "@styles/commons" as *;
+@use "@styles/grids" as *;
+@use "@styles/mixins" as *;
+@use "@styles/spaces" as *;
+@use "@styles/typography" as *;
+@use "@styles/variables" as *;
+
+html {
+  font-size: clamp(8px, 1vw, 16px);
+}
+body {
+  background-color: $background-default;
+  color: $text-primary;
+}

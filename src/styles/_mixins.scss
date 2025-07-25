@@ -1,0 +1,7 @@
+@use "sass:math";
+
+@function pxToRem($px-value) {
+  @return calc($px-value / 16px) * 1rem;
+}
+// example of pxToRem
+// pxToRem(138px);

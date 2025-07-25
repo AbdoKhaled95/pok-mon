@@ -1,0 +1,58 @@
+@use "@styles/colors" as *;
+@use "@styles/variables" as *;
+@use "@styles/breakpoints" as *;
+@use "@styles/grids" as *;
+
+#header {
+  min-height: $header_height;
+  display: flex;
+}
+.header {
+  &-container {
+    &--content {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      height: 100%;
+      &---logo {
+        cursor: pointer;
+        @include respondTo(xs) {
+          flex: 1;
+        }
+        @include respondTo(md) {
+          flex: initial;
+        }
+      }
+      &---links {
+        flex: 1;
+        align-items: center;
+        gap: 1rem;
+        @include respondTo(xs) {
+          display: none;
+        }
+        @include respondTo(md) {
+          display: flex;
+        }
+      }
+      &---settings {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        @include respondTo(xs) {
+          display: none;
+        }
+        @include respondTo(md) {
+          display: flex;
+        }
+      }
+      &---menuBtn {
+        @include respondTo(xs) {
+          display: initial !important;
+        }
+        @include respondTo(md) {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
