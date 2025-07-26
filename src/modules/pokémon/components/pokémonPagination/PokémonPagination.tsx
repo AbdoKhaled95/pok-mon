@@ -24,7 +24,7 @@ const PokémonPagination = ({ className }: Props) => {
   };
 
   if (isLoading) return <CustomLoader />;
-  if (!isError)
+  if (isError)
     return (
       <div className="pokémon_pagination-error">
         <Typography color="error" variant="h6">

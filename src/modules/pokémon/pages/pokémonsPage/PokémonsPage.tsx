@@ -20,30 +20,30 @@ const PokémonsPage = () => {
       case 0:
         return {
           mode: "pagination",
-          component: PokémonPagination({
-            className: "pokémons_page-container--content---items",
-          }),
+          component: (
+            <PokémonPagination className="pokémons_page-container--content---items" />
+          ),
         };
       case 1:
         return {
           mode: "loadMore",
-          component: PokémonLoadMore({
-            className: "pokémons_page-container--content---items",
-          }),
+          component: (
+            <PokémonLoadMore className="pokémons_page-container--content---items" />
+          ),
         };
       default:
         return {
           mode: "pagination",
-          component: PokémonPagination({
-            className: "pokémons_page-container--content---items",
-          }),
+          component: (
+            <PokémonPagination className="pokémons_page-container--content---items" />
+          ),
         };
     }
   };
 
   return (
     <PageMotion
-      className={`pokémons_page ${getMode().mode}`}
+      className={`pokémons_page ${getMode()?.mode}`}
       id="pokémons_page"
     >
       <CustomContainer className="pokémons_page-container">
