@@ -74,3 +74,9 @@ The **Pokémon module** is a self-contained feature that provides a way to explo
 first install dependencies with `npm install` then run `npm run dev`
 
 ---
+
+## 🚀 Deployment
+
+The application is deployed using **Vercel**. You can access it at `https://pok-mon-swart.vercel.app/`
+
+---
