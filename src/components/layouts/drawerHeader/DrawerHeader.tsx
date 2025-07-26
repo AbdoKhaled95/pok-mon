@@ -3,7 +3,6 @@ import "./DrawerHeader.scss";
 import CustomLogo from "@components/logos/customLogo/CustomLogo";
 import { BaselineClose } from "@svgComponents/SvgIcons";
 import HeaderLink from "@components/navigation/headerLink/HeaderLink";
-import { ROUTES_PATH } from "@enums/routesPath.enum";
 import Languages from "@components/settings/languages/Languages";
 import useHeaderLinks from "@hooks/useHeaderLinks";
 type Props = {

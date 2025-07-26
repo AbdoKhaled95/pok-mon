@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 const useHeaderLinks = () => {
   const { t } = useTranslation();
-  const headerLinks = [{ label: t("pokemon"), to: `/${ROUTES_PATH.pokemon}` }];
+  const headerLinks = [{ label: t("pokemon"), to: `/${ROUTES_PATH.POKEMON}` }];
   return { headerLinks };
 };
 

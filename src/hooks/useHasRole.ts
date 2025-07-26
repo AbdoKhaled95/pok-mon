@@ -1,7 +1,7 @@
-type Props = {
-  roles?: string[];
-};
-const useHasRole = ({ roles }: Props) => {
+// type Props = {
+//   roles?: string[];
+// };
+const useHasRole = () => {
   // const { userProfile } = useSelector(
   //   (state: RootState) => state.authentication
   // );
