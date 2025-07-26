@@ -6,11 +6,11 @@ import { lazy, Suspense } from "react";
 import Layout from "@components/layouts/layout/Layout";
 import RouteLoader from "@components/loaders/routeLoader/RouteLoader";
 
-const PokémonsPage = lazy(
-  () => import("@modules/pokémon/pages/pokémonsPage/PokémonsPage")
+const PokemonsPage = lazy(
+  () => import("@modules/pokemon/pages/pokemonsPage/PokemonsPage")
 );
-const PokémonPage = lazy(
-  () => import("@modules/pokémon/pages/pokémonPage/PokémonPage")
+const PokemonPage = lazy(
+  () => import("@modules/pokemon/pages/pokemonPage/PokemonPage")
 );
 const NoPageFound = lazy(() => import("@components/noPageFound/NoPageFound"));
 const Forbidden = lazy(() => import("@components/forbidden/Forbidden"));
@@ -23,14 +23,14 @@ export const AppRouter = () => {
         <Suspense fallback={<RouteLoader />}>
           <Routes location={location}>
             <Route element={<Layout />}>
-              <Route index element={<PokémonsPage />} />
+              <Route index element={<PokemonsPage />} />
               <Route
                 path={`/${ROUTES_PATH.POKEMON}`}
-                element={<PokémonsPage />}
+                element={<PokemonsPage />}
               />
               <Route
                 path={`/${ROUTES_PATH.POKEMON}/:id`}
-                element={<PokémonPage />}
+                element={<PokemonPage />}
               />
             </Route>
 

@@ -3,12 +3,12 @@ import { persistReducer } from "redux-persist";
 import { persistConfig } from "@store/persistConfig";
 import settingsReducer from "@store/slices/settingsSlice";
 import authenticationReducer from "@modules/authentication/slices/authenticationSlice";
-import pokémonReducer from "@modules/pokémon/slices/pokémonSlice";
+import pokemonReducer from "@modules/pokemon/slices/pokemonSlice";
 
 const rootReducer = combineReducers({
   settings: settingsReducer,
   authentication: authenticationReducer,
-  Pokémon: pokémonReducer,
+  pokemon: pokemonReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
