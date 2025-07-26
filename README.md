@@ -1,69 +1,76 @@
-# React + TypeScript + Vite
+# 🧬 Project Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **React** application built with **TypeScript**, using **Vite** as the development server and bundler. It integrates a robust tech stack featuring **Redux**, **React Router**, and **Material-UI**, delivering a modular and scalable codebase for building responsive user interfaces.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📁 Project Structure
 
-## Expanding the ESLint configuration
+src/
+├── components/ # Reusable UI components (forms, inputs, loaders, etc.)
+├── enums/ # Enum definitions (e.g., ROUTES_PATH, APP_THEMES)
+├── hooks/ # Custom React hooks (e.g., useMount, useModalHandler)
+├── models/ # TypeScript models (e.g., PokemonInfo)
+├── modules/ # Feature-specific modules (website, Pokémon)
+├── utils/ # Utility functions (e.g., formattedThreeDigits)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🎮 Pokémon Module Overview
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+The **Pokémon module** is a self-contained feature that provides a way to explore detailed information about different Pokémon. It includes multiple components, hooks, and utility functions to enhance user experience.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 🔑 Key Features
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+#### 📋 Pokémon List
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Displays a list of Pokémon.
+- Includes pagination and load more for easy navigation.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+#### 🧾 Pokémon Card
+
+- Shows a Pokémon's name, type, and brief description.
+
+#### 📊 Pokémon Info Card
+
+- Displays detailed data: stats, moves, and evolution chain.
+
+#### 📇 Pokémon Pagination
+
+- Enables pagination through multiple result pages.
+
+#### 📥 Pokémon Load More
+
+- Fetches and appends more Pokémon to the existing list.
+
+---
+
+## 🛠️ Services & Utilities
+
+- **`useGetPokemons`** – Custom hook to fetch a list of Pokémon from the API.
+- **`useGetPokemon`** – Custom hook to fetch details about a specific Pokémon.
+- **`pokemonApi`** – Utility for making API calls to the Pokémon API.
+
+---
+
+## 📦 Libraries & Dependencies
+
+| Library            | Purpose                                  |
+| ------------------ | ---------------------------------------- |
+| `react`            | Core library for building UI             |
+| `react-dom`        | DOM rendering for React                  |
+| `react-router-dom` | Client-side routing                      |
+| `@mui/material`    | Material UI components & styling         |
+| `axios`            | Promise-based HTTP client for API calls  |
+| `@reduxjs/toolkit` | Redux toolkit for state management       |
+| `framer-motion`    | Animation library for smooth transitions |
+| `sass`             | CSS preprocessor for styling             |
+| `react-query`      | Data fetching library                    |
+
+---
+
+## running the app
+
+first install dependencies with `npm install` then run `npm run dev`
+
+---
