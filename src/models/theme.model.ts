@@ -14,6 +14,11 @@ declare module "@mui/material/styles" {
     pageControl: string;
     loadMore: string;
     cover: string;
+    infoCardHead: string;
+    details: string;
+  }
+  interface TypeText {
+    third: string;
   }
   interface PaletteOptions {
     border?: {

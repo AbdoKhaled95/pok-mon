@@ -4,3 +4,5 @@ export const convertCamelToTitleCase = (text: string) => {
 };
 export const isObjectHasKeys = (obj: object): boolean =>
   Object.keys(obj).length > 0;
+export const formattedThreeDigits = (number: number) =>
+  number < 1000 ? number.toString().padStart(3, "0") : number.toString();

@@ -16,3 +16,6 @@ export const getPokemons = async ({
     },
   });
 };
+export const getPokemon = async ({ id }: { id: number }) => {
+  return axiosInstance.get(`${POKEMONS_ENDPOINT}/${id}`);
+};

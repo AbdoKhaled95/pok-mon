@@ -1,21 +1,20 @@
 import { Typography } from "@mui/material";
 import "./PokemonCard.scss";
-import type { PokemonResult } from "@modules/pokemon/models/pokemon.model";
+import type { PokemonInfo } from "@modules/pokemon/models/pokemon.model";
 import { useNavigate } from "react-router-dom";
 import { ROUTES_PATH } from "@enums/routesPath.enum";
 import { useDispatch } from "react-redux";
 import { setPokemonId } from "@modules/pokemon/slices/pokemonSlice";
+import { formattedThreeDigits } from "@utils/general.utils";
 type Props = {
   className?: string;
-  data: PokemonResult;
+  data: PokemonInfo;
 };
 const PokemonCard = ({ className, data }: Props) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const match = data.url.match(/\/pokemon\/(\d+)\//);
   const number = match ? parseInt(match[1], 10) : 0;
-  const formatted =
-    number < 1000 ? number.toString().padStart(3, "0") : number.toString();
 
   const handleClick = () => {
     dispatch(setPokemonId(number));
@@ -27,7 +26,7 @@ const PokemonCard = ({ className, data }: Props) => {
         <img
           className="pokemon_card-cover--img"
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${number}.png`}
-          alt={`pokemon-${number}`}
+          alt={`pokemon-${number} ${data.name}`}
         />
       </div>
       <div className="pokemon_card-info">
@@ -35,7 +34,7 @@ const PokemonCard = ({ className, data }: Props) => {
           {data.name}
         </Typography>
         <Typography variant="body2" className="pokemon_card-info--number">
-          #{formatted}
+          #{formattedThreeDigits(number)}
         </Typography>
       </div>
     </div>

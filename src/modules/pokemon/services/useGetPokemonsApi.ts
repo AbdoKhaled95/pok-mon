@@ -24,9 +24,6 @@ export const useLoadMorePokemons = () => {
     initialPageParam: 0,
 
     getNextPageParam: (lastPage, allPages) => {
-      console.log(lastPage);
-      console.log(allPages);
-
       const hasMore = lastPage?.length === limit;
       return hasMore ? allPages.length * limit : undefined;
     },

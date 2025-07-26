@@ -17,6 +17,10 @@ export const PALETTE_COLORS = {
     light: "#000",
     dark: "#fff",
   },
+  TEXT_THIRD: {
+    light: "#bc50da",
+    dark: "#bc50da",
+  },
   BACKGROUND_DEFAULT: {
     light: "#fff",
     dark: "#121212",
@@ -36,6 +40,14 @@ export const PALETTE_COLORS = {
   BACKGROUND_COVER: {
     light: "#fcfcfc",
     dark: "#fcfcfc",
+  },
+  BACKGROUND_DETAILS: {
+    light: "#f9f1fe",
+    dark: "#f9f1fe",
+  },
+  BACKGROUND_INFO_CARD_HEAD: {
+    light: "#bc50da",
+    dark: "#bc50da",
   },
   BORDER_PRIMARY: {
     light: "#3eb6ae",

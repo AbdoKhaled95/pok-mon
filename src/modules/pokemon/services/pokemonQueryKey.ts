@@ -1,1 +1,2 @@
 export const POKEMONS_QUERY_KEY = "POKEMONS";
+export const POKEMON_QUERY_KEY = "POKEMON";

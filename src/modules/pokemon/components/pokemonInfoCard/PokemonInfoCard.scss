@@ -1,0 +1,136 @@
+@use "@styles/colors" as *;
+@use "@styles/breakpoints" as *;
+
+.pokemon_info_card {
+  border-radius: 0.5rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  &-head {
+    padding: 1.5rem;
+    background-color: $background-infoCardHead;
+    color: $common-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    &--title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 3rem;
+      &---text {
+        text-transform: capitalize;
+      }
+    }
+  }
+  &-body {
+    background-color: $background-default;
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    @include respondTo(xs) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @include respondTo(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &--section {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      &---cover {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &----img {
+          width: 20rem;
+          border-radius: 50%;
+          background-color: $background-cover;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+          overflow: visible;
+          padding: 2rem;
+        }
+      }
+      &---info {
+        &----block {
+          background-color: $background-cover;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 1rem;
+          border-radius: 0.5rem;
+          padding: 1rem;
+          &-----label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: $text-secondary;
+          }
+          &-----value {
+            font-weight: 700 !important;
+          }
+        }
+      }
+      &---stats {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        &----title {
+          font-weight: 700 !important;
+        }
+        &----list {
+          display: flex;
+          flex-direction: column;
+          &-----item {
+            &------label {
+              line-height: 1 !important;
+              font-weight: 700 !important;
+              text-transform: capitalize;
+            }
+            &------value {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+
+              &-------bar {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+      &---abilities {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        &----title {
+          font-weight: 700 !important;
+        }
+        &----list {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          &-----ability {
+            &------hidden {
+              color: $text-secondary;
+            }
+          }
+        }
+      }
+      &---experience {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        &----title {
+          font-weight: 700 !important;
+        }
+        &----value {
+          font-weight: 700 !important;
+          color: $text-third;
+        }
+      }
+    }
+  }
+}

@@ -1,9 +1,9 @@
-import type { PokemonResult } from "@modules/pokemon/models/pokemon.model";
+import type { PokemonInfo } from "@modules/pokemon/models/pokemon.model";
 import PokemonCard from "../pokemonCard/PokemonCard";
 import "./PokemonList.scss";
 type Props = {
   className?: string;
-  data: PokemonResult[];
+  data: PokemonInfo[];
 };
 
 const PokemonList = ({ className, data }: Props) => {

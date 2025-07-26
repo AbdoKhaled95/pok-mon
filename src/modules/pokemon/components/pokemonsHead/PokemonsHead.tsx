@@ -3,6 +3,7 @@ import "./PokemonsHead.scss";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "@store/store";
 import { setMode } from "@modules/pokemon/slices/pokemonSlice";
+import { ElectricBoltOutline } from "@assets/svgComponents/SvgIcons";
 type Props = {
   className?: string;
 };
@@ -24,7 +25,10 @@ const PokemonsHead = ({ className }: Props) => {
   return (
     <div className={`pokemons_head ${className ?? ""}`}>
       <div className="pokemons_head-title">
-        <Typography variant="h2">pokedex</Typography>
+        <ElectricBoltOutline />
+        <Typography variant="h2" className="pokemons_head-title--text">
+          Pokedex
+        </Typography>
       </div>
       <Typography variant="body1" className="pokemons_head-description">
         Discover and explore Pokémon with {actionsBtn[mode].label}

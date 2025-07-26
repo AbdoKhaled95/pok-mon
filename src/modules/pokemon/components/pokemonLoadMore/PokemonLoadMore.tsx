@@ -2,7 +2,7 @@ import PokemonList from "../pokemonList/PokemonList";
 import "./PokemonLoadMore.scss";
 import CustomLoader from "@components/loaders/customLoader/CustomLoader";
 import { Alert, Button, Snackbar, Typography } from "@mui/material";
-import type { PokemonResult } from "@modules/pokemon/models/pokemon.model";
+import type { PokemonInfo } from "@modules/pokemon/models/pokemon.model";
 import { useLoadMorePokemons } from "@modules/pokemon/services/useGetPokemonsApi";
 type Props = {
   className?: string;
@@ -16,8 +16,7 @@ const PokemonLoadMore = ({ className }: Props) => {
     isFetchingNextPage,
     isError,
   } = useLoadMorePokemons();
-  console.log(data?.pages.flat());
-  const list: PokemonResult[] = data?.pages?.flat() ? data?.pages?.flat() : [];
+  const list: PokemonInfo[] = data?.pages?.flat() ? data?.pages?.flat() : [];
 
   if (isLoading) return <CustomLoader />;
 

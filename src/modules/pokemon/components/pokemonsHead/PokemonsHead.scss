@@ -6,6 +6,10 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-size: 3.75rem;
+    &--text {
+      font-weight: 700 !important;
+    }
   }
   &-actions {
     display: flex;
