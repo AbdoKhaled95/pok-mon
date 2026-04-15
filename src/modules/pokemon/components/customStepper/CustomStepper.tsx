@@ -5,6 +5,7 @@ type Props = {
   steps: number;
   currentStep: number;
   onStepClick?: (step: number) => void;
+  children?: React.ReactNode;
 };
 
 const CustomStepper = ({
@@ -12,6 +13,7 @@ const CustomStepper = ({
   steps,
   currentStep,
   onStepClick,
+  children,
 }: Props) => {
   const stepsArray = Array.from({ length: steps }, (_, index) => index + 1);
   const lastStep = stepsArray.length;
@@ -82,6 +84,15 @@ const CustomStepper = ({
           className="custom_stepper-progress--bar"
           style={{ width: `${progress}%` }}
         />
+      </div>
+      <div className="custom_stepper-content">{children}</div>
+      <div className="custom_stepper-controls">
+        {prevSteps.length > 0 && (
+          <button onClick={() => onStepClick?.(prevStep)}>Previous</button>
+        )}
+        {nextSteps.length > 0 && (
+          <button onClick={() => onStepClick?.(nextStep)}>Next</button>
+        )}
       </div>
     </div>
   );

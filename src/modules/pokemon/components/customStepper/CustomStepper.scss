@@ -59,4 +59,11 @@
       transition: width 0.3s ease-in-out;
     }
   }
+  &-content {
+  }
+  &-controls {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
 }
